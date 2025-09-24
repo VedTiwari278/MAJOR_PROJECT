@@ -18,7 +18,7 @@ const Register = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      await axios.post(`https://major-project-tau-seven.vercel.app/register-user`, form);
+      await axios.post(`${API_URL}/register-user`, form);
       navigate("/login");
     } catch (err) {
       console.error("❌ Registration failed:", err);

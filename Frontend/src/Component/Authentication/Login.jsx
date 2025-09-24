@@ -24,10 +24,7 @@ const Login = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const { data } = await axios.post(
-        `https://major-project-tau-seven.vercel.app/login-user`,
-        form
-      );
+      const { data } = await axios.post(`${API_URL}/login-user`, form);
       login(data.token);
 
       // Decode token to get role

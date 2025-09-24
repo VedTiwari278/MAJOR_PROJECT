@@ -14,15 +14,7 @@ const authMiddleware = require("./middleware/authmiddleware");
 //Local Route import end
 
 const app = express();
-
-app.use(
-  cors({
-    origin: "*", // your frontend domain
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true,
-  })
-);
-
+app.use(cors());
 app.use(express.json());
 
 // Route
@@ -46,13 +38,10 @@ mongoose
   .then(() => {
     console.log("✅ Connected to MongoDB");
 
-    // Use environment port or default to 8000
-    const PORT = process.env.PORT || 8000;
-    app.listen(PORT, () => {
+    // Start server after DB connection
+    app.listen(process.env.PORT, () => {
       console.log(
-        `🚀 App is listening at ${
-          process.env.BACKEND_HOST || "localhost"
-        }:${PORT}`
+        `🚀 App is listening at ${process.env.BACKEND_HOST} ${process.env.PORT}`
       );
     });
   })
