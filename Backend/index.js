@@ -14,7 +14,12 @@ const authMiddleware = require("./middleware/authmiddleware");
 //Local Route import end
 
 const app = express();
-app.use(cors());
+app.use(
+  cors({
+    origin: "*", // Allow all origins (not recommended for production)
+    methods: ["GET", "POST", "PUT", "DELETE"],
+  })
+);
 app.use(express.json());
 
 // Route
