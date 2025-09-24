@@ -4,7 +4,7 @@ const authMiddleware = require("../middleware/authmiddleware");
 const controller = require("../Controller/AdminController");
 const multer = require("multer");
 
-const { storage } = require("../config/cloudinary"); // ✅ Cloudinary storage
+const { storage } = require("../cloudinary"); // ✅ Cloudinary storage
 const upload = multer({ storage });
 
 // ✅ Add Menu
