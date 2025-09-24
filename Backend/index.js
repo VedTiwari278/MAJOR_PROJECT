@@ -16,8 +16,14 @@ const authMiddleware = require("./middleware/authmiddleware");
 const app = express();
 app.use(
   cors({
-    origin: "*", // Allow all origins (not recommended for production)
-    methods: ["GET", "POST", "PUT", "DELETE"],
+    origin: [
+      "https://major-project-lprd.vercel.app",
+      "http://localhost:3000", // Local development
+      "https://major-project-tau-seven.vercel.app", // Self-origin
+    ],
+    credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
 app.use(express.json());
