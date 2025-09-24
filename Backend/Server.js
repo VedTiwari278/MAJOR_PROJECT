@@ -17,7 +17,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "https://major-project-jb5s.vercel.app", // frontend origin
+    origin: "https://major-project-jb5s.vercel.app/", // frontend origin
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     credentials: true, // if you send cookies
   })
