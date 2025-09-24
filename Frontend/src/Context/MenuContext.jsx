@@ -11,7 +11,7 @@ export const MenuProvider = ({ children }) => {
     try {
       // console.log("Ye hai Asli URL:", import.meta.env.VITE_BACKEND_URL);
 
-      const response = await axios.get(`${API_URL}/menu-items`);
+      const response = await axios.get(`${API_URL}menu-items`);
       if (response.data && Array.isArray(response.data.data)) {
         setMenuItems(response.data.data);
       } else {
