@@ -8,7 +8,7 @@ export const OrderProvider = ({ children }) => {
 
   const fetchOrder = async () => {
     try {
-      const res = await axios.get(`${API_URL}/get-orders`);
+      const res = await axios.get(`${API_URL}get-orders`);
       setOrder(res.data); // backend se fresh data
     } catch (error) {
       console.error("Error fetching orders:", error);

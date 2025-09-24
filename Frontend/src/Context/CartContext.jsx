@@ -27,7 +27,7 @@ export const CartProvider = ({ children }) => {
       }
 
       axios
-        .get(`${API_URL}/cart/${userId}`)
+        .get(`${API_URL}cart/${userId}`)
         .then((res) => {
           const items = res.data.items || [];
           const normalized = items.reduce((acc, item) => {
@@ -50,7 +50,7 @@ export const CartProvider = ({ children }) => {
       return;
     }
     try {
-      await axios.put(`${API_URL}/cart/${userId}`, {
+      await axios.put(`${API_URL}cart/${userId}`, {
         cart: newCart,
       });
     } catch (err) {
