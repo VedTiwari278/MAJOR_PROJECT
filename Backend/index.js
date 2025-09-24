@@ -17,7 +17,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "https://major-project-lprd.vercel.app", // your frontend domain
+    origin: "*", // your frontend domain
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
@@ -46,10 +46,13 @@ mongoose
   .then(() => {
     console.log("✅ Connected to MongoDB");
 
-    // Start server after DB connection
-    app.listen(process.env.PORT, () => {
+    // Use environment port or default to 8000
+    const PORT = process.env.PORT || 8000;
+    app.listen(PORT, () => {
       console.log(
-        `🚀 App is listening at ${process.env.BACKEND_HOST} ${process.env.PORT}`
+        `🚀 App is listening at ${
+          process.env.BACKEND_HOST || "localhost"
+        }:${PORT}`
       );
     });
   })
