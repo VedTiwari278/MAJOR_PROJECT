@@ -55,7 +55,6 @@ const Checkout = () => {
       ...formData,
       address: addressToSend,
       item,
-      orderDate: new Date().toLocaleString(),
       userId: user.id,
     };
 

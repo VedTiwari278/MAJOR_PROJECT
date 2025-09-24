@@ -1,6 +1,6 @@
 const express = require("express");
 const Menu = require("../Model/AddMenu");
-const { cloudinary } = require("../cloudinary");
+const { cloudinary } = require("../config/cloudinary");
 exports.AddMenu = async (req, res) => {
   try {
     console.log("Cloudinary Response:", req.file); // yaha secure_url aayega

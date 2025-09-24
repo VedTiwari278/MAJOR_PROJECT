@@ -1,5 +1,5 @@
 //Environment Variables
-require("dotenv").config({ path: "/.env" });
+require("dotenv").config({ path: "./config/.env" });
 
 const express = require("express");
 const mongoose = require("mongoose");
@@ -14,15 +14,7 @@ const authMiddleware = require("./middleware/authmiddleware");
 //Local Route import end
 
 const app = express();
-
-app.use(
-  cors({
-    origin: "https://major-project-jb5s.vercel.app/", // frontend origin
-    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-    credentials: true, // if you send cookies
-  })
-);
-
+app.use(cors());
 app.use(express.json());
 
 // Route
