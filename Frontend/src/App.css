@@ -1,0 +1,77 @@
+/* Navbar spacing fix */
+body {
+  padding-top: 80px;
+  background-color: #fff8f0; /* Light foodie background */
+}
+
+/* Container styling */
+.foodie-container {
+  background: #fff8f0;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+.foodie-title {
+  color: #ff6f3c;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+/* Preview Card */
+.foodie-preview-card {
+  background: #fff5e1;
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 4px 12px rgba(255, 111, 60, 0.2);
+}
+
+.foodie-preview-img {
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+}
+
+.foodie-preview-placeholder {
+  height: 250px;
+  background: #ffe6cc;
+  color: #ff6f3c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px 12px 0 0;
+  font-weight: bold;
+}
+
+/* Form */
+.foodie-form {
+  background: #fff5e1;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(255, 111, 60, 0.2);
+}
+
+.foodie-input {
+  background: #fffaf5;
+  border: 1px solid #ffd4b8;
+  color: #333;
+}
+
+.foodie-input:focus {
+  border-color: #ff6f3c;
+  box-shadow: 0 0 5px rgba(255, 111, 60, 0.5);
+}
+
+/* Button */
+.foodie-btn {
+  background: #ff6f3c;
+  border: none;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.foodie-btn:hover {
+  background: #ff824d;
+}
